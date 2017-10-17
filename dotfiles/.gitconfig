@@ -1,5 +1,5 @@
 [user]
-    email = Joel.Dunham@dell.com
+	email = joel.dunham@emc.com
     name = Joel Dunham
 
 [alias]
@@ -16,6 +16,7 @@
 
 [diff]
 	renamelimit = 20000
+	tool = diffmerge
 
 [color]
     ui = auto
@@ -31,3 +32,18 @@
 
 [credential]
 	helper = osxkeychain
+[difftool "diffmerge"]
+	cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
+[merge]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	trustExitCode = true
+	cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+[core]
+	excludesfile = /Users/dunhaj1/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

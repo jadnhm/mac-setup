@@ -100,6 +100,10 @@ diffTool() {
     git config --global mergetool.diffmerge.cmd "/usr/local/bin/diffmerge --merge --result=\"\$MERGED\" \"\$LOCAL\" \"\$BASE\" \"\$REMOTE\""
 }
 
+istats() {
+    gem install iStats
+}
+
 dotfiles
 updateBrew
 brewBundle
@@ -110,3 +114,4 @@ codeExtensions
 keyRepeat
 showHiddenFiles
 diffTool
+istats

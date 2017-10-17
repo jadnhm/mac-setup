@@ -10,7 +10,7 @@
     "files.associations": {
         "Vagrantfile": "ruby"
     },
-    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.colorTheme": "Monokai",
     "spellchecker.documentTypes": [
         "markdown",
         "latex",
@@ -19,5 +19,7 @@
     ],
     "[markdown]": {
         "editor.wordwrap": "on"
-    }
+    },
+    "vsicons.projectDetection.autoReload": true,
+    "workbench.iconTheme": "vs-minimal"
 }
